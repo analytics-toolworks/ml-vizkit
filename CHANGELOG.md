@@ -15,7 +15,33 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [0.0.1] - 2026-08-15
 
-- initial versioned release
+### Added
+
+- Initial public release of `ml-vizkit`.
+- Added reusable visualization utilities for inspecting, comparing, and
+  explaining trained machine-learning models and completed experiments.
+- Added classification visualizations:
+  - `show_decision_boundary()`
+  - `show_confusion_matrix()`
+  - `show_prediction_errors()`
+  - `show_class_distribution()`
+- Added regression visualizations:
+  - `show_actual_vs_predicted()`
+  - `show_residuals()`
+- Added model inspection with `show_feature_importance()`.
+- Added experiment visualizations:
+  - `show_train_test_split()`
+  - `compare_splits()`
+  - `compare_models()`
+- Visualization functions return Matplotlib `Axes` objects so callers retain
+  control over rendering, composition, annotation, and export.
+- Added typed public package support with `py.typed`.
+- Added tests verifying the visualization return contract.
+- Added project documentation and API documentation.
+- Added Python 3.14 project configuration.
+- Added Ruff, ty, pytest, pre-commit, and CI validation.
+- Added Zensical documentation configuration and deployment workflows.
+- Added PyPI release and pre-release workflows.
 
 ---
 
@@ -53,11 +79,6 @@ uv sync
 uv run pre-commit install
 uv run pre-commit autoupdate
 
-# optional: generate and check CODEOWNERS
-# based on roles defined in .accountability/surfaces.toml
-uvx se-codeowners generate --strict --output .github/CODEOWNERS
-uvx se-codeowners check
-
 git add -A
 uv run pre-commit run --all-files
 # repeat if changes were made
@@ -85,15 +106,6 @@ Verify actions run on GitHub. After success:
 git tag vX.Y.Z -m "X.Y.Z"
 git push origin vX.Y.Z
 ```
-
-### Task 4. Verify tag consistency
-
-```shell
-uvx se-manifest-schema check-version --require-tag
-```
-
-Confirms CITATION.cff version matches the pushed git tag.
-Run this after `git push origin vX.Y.Z`; it will fail before that point.
 
 ## Only As Needed (delete a tag)
 
