@@ -14,6 +14,8 @@ import pandas as pd
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.metrics import ConfusionMatrixDisplay
 
+type Numeric1D = Sequence[float] | np.ndarray | pd.Series
+
 
 def _new_axes(ax: Axes | None) -> Axes:
     """Return caller-provided axes or create new axes without rendering."""
@@ -95,8 +97,8 @@ def show_decision_boundary(
 
 
 def show_confusion_matrix(
-    y_true: Sequence[Any],
-    y_pred: Sequence[Any],
+    y_true: Numeric1D,
+    y_pred: Numeric1D,
     *,
     labels: Sequence[Any] | None = None,
     normalize: str | None = None,
@@ -125,8 +127,8 @@ def show_confusion_matrix(
 
 def show_prediction_errors(
     X: pd.DataFrame,
-    y_true: Sequence[Any],
-    y_pred: Sequence[Any],
+    y_true: Numeric1D,
+    y_pred: Numeric1D,
     *,
     ax: Axes | None = None,
     title: str = "Classification Prediction Errors",
@@ -175,7 +177,7 @@ def show_prediction_errors(
 
 
 def show_class_distribution(
-    y: Sequence[Any],
+    y: Numeric1D,
     *,
     ax: Axes | None = None,
     title: str = "Class Distribution",

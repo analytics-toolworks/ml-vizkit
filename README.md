@@ -11,6 +11,11 @@
 [![Links](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/links.yml)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/analytics-toolworks/ml-vizkit/security)
 
+<img
+src="https://raw.githubusercontent.com/analytics-toolworks/ml-vizkit/main/docs/images/profile.png"
+alt="profile logo"
+width="110">
+
 > Reusable visualizations for inspecting, comparing, and
 > explaining trained machine-learning models.
 

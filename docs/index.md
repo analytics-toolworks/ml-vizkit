@@ -1,6 +1,9 @@
 # ml-vizkit
 
-<img src="images/ml-vizkit-logo.png" alt="ML VizKit logo" width="150">
+<img
+src="https://raw.githubusercontent.com/analytics-toolworks/ml-vizkit/main/docs/images/profile.png"
+alt="profile logo"
+width="110">
 
 `ml-vizkit` provides small, reusable visualization utilities for inspecting,
 comparing, and explaining trained machine-learning models and completed

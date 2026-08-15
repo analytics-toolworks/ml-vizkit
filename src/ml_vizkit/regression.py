@@ -4,7 +4,11 @@ from collections.abc import Sequence
 
 from matplotlib.axes import Axes
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 from sklearn.metrics import PredictionErrorDisplay
+
+type Numeric1D = Sequence[float] | np.ndarray | pd.Series
 
 
 def _new_axes(ax: Axes | None) -> Axes:
@@ -16,8 +20,8 @@ def _new_axes(ax: Axes | None) -> Axes:
 
 
 def show_actual_vs_predicted(
-    y_true: Sequence[float],
-    y_pred: Sequence[float],
+    y_true: Numeric1D,
+    y_pred: Numeric1D,
     *,
     ax: Axes | None = None,
     title: str = "Actual vs. Predicted",
@@ -41,8 +45,8 @@ def show_actual_vs_predicted(
 
 
 def show_residuals(
-    y_true: Sequence[float],
-    y_pred: Sequence[float],
+    y_true: Numeric1D,
+    y_pred: Numeric1D,
     *,
     ax: Axes | None = None,
     title: str = "Residuals vs. Predicted",
