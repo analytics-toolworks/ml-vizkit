@@ -1,0 +1,52 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# WHY: Support correct citation and attribution.
+# ALT: Internal or private repositories may omit citation metadata.
+# CUSTOM: Update author, repository, license, and keyword fields as needed.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+message: "If using this project, please cite it as described in this file."
+type: software
+
+title: "ml-vizkit"
+version: "0.0.1"
+date-released: "2026-08-15"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, USA"
+
+repository-code: "https://github.com/analytics-toolworks/ml-vizkit"
+url: "https://github.com/analytics-toolworks/ml-vizkit"
+license: MIT
+
+abstract: |
+  Reusable visualizations for inspecting, comparing, and explaining trained
+  machine-learning models and completed experiments. Provides concise, high-level
+  Python functions for common views such as confusion matrices, decision
+  boundaries, residual plots, feature importance, and model comparisons. Works
+  with already-trained models, predictions, and experiment results from libraries
+  such as scikit-learn; it does not train models or make analytical decisions.
+  Functions return Matplotlib Axes objects, leaving display and composition to
+  the caller.
+
+keywords:
+  - machine-learning
+  - visualization
+  - model-inspection
+  - model-explainability
+  - scikit-learn
+  - matplotlib
+  - python
+  - data-science
+  - practitioners
+  - reproducible-workflows
+  - developer-tools
+  - open-source
+
