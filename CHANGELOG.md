@@ -90,6 +90,11 @@ uvx cffconvert --validate
 uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
+
+uv run python -c "import shutil; from pathlib import Path; shutil.rmtree(Path('dist'), ignore_errors=True)"
+
+uv build
+uvx twine check dist/*
 ```
 
 ### Task 3. Commit, push, tag

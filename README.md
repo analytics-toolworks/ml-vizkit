@@ -1,5 +1,6 @@
 # ML VizKit
 
+[![PyPI](https://img.shields.io/pypi/v/pup-core?logo=pypi&label=pypi)](https://pypi.org/project/ml-vizkit/)
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://analytics-toolworks.github.io/ml-vizkit/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](https://github.com/analytics-toolworks/ml-vizkit/blob/main/pyproject.toml)
 ![uv](https://img.shields.io/badge/uv-managed-DE5FE9)
