@@ -1,8 +1,8 @@
 # ML VizKit
 
-[![PyPI](https://img.shields.io/pypi/v/pup-core?logo=pypi&label=pypi)](https://pypi.org/project/ml-vizkit/)
+[![PyPI](https://img.shields.io/pypi/v/ml-vizkit?logo=pypi&label=pypi)](https://pypi.org/project/ml-vizkit/)
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://analytics-toolworks.github.io/ml-vizkit/)
-[![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](https://github.com/analytics-toolworks/ml-vizkit/blob/main/pyproject.toml)
+[![Python](https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/analytics-toolworks/ml-vizkit/main/pyproject.toml&logo=python)](https://github.com/analytics-toolworks/ml-vizkit/blob/main/pyproject.toml)
 ![uv](https://img.shields.io/badge/uv-managed-DE5FE9)
 [![CI Status](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -96,9 +96,9 @@ Experiment inspection:
 Open a machine terminal where you want the project:
 
 ```shell
-git clone https://github.com/pup-pack/pup-up
+git clone https://github.com/analytics-toolworks/ml-vizkit
 
-cd pup-up
+cd ml-vizkit
 code .
 ```
 
@@ -119,12 +119,6 @@ uv run pre-commit run --all-files
 # repeat if changes were made
 uv run pre-commit run --all-files
 
-# run locally to test
-uv run pup-up
-uv run pup-up --diff
-uv run pup-up --write
-uv run pup-up --write .gitattributes .github/.yamllint.yml .github/workflows/links.yml
-
 # types, tests, docs
 uv run ty check
 uv run python -m pytest
@@ -140,7 +134,7 @@ git push -u origin main
 
 ## Documentation
 
-- [Documentation](https://pup-pack.github.io/pup-up/)
+- [Documentation](https://analytics-toolworks.github.io/ml-vizkit)
 
 ## Annotations
 

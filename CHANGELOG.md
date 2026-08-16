@@ -13,6 +13,18 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.0.2] - 2026-08-16
+
+## Added
+
+- Add copy/paste leakage check
+
+## Fixed
+
+- README.md links
+
+---
+
 ## [0.0.1] - 2026-08-15
 
 ### Added
@@ -121,7 +133,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/analytics-toolworks/ml-vizkit/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/analytics-toolworks/ml-vizkit/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/analytics-toolworks/ml-vizkit/releases/tag/v0.0.2
 [0.0.1]: https://github.com/analytics-toolworks/ml-vizkit/releases/tag/v0.0.1
 
 <!-- markdownlint-enable MD024 -->

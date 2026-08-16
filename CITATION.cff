@@ -13,8 +13,8 @@ message: "If using this project, please cite it as described in this file."
 type: software
 
 title: "ml-vizkit"
-version: "0.0.1"
-date-released: "2026-08-15"
+version: "0.0.2"
+date-released: "2026-08-16"
 
 authors:
   - family-names: Case
