@@ -79,8 +79,6 @@ Follow these steps exactly when creating a new release.
 ### Task 2. Validate
 
 ```shell
-uvx pup-clean@latest --delete
-uvx pup-up@latest --write
 .\sit.ps1
 
 # OR
