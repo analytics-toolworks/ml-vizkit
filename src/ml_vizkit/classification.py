@@ -18,7 +18,14 @@ type Numeric1D = Sequence[float] | np.ndarray | pd.Series
 
 
 def _new_axes(ax: Axes | None) -> Axes:
-    """Return caller-provided axes or create new axes without rendering."""
+    """Return caller-provided axes or create new axes without rendering.
+
+    Args:
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
+    """
     if ax is not None:
         return ax
     _, new_ax = plt.subplots()
@@ -37,6 +44,19 @@ def show_decision_boundary(
     alpha: float = 0.25,
 ) -> Axes:
     """Show the decision boundary for an already-trained classifier.
+
+    Args:
+        model: The trained classifier to visualize.
+        X: A DataFrame containing exactly two numeric features.
+        y: Optional sequence of true labels corresponding to X.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        response_method: The response method to use for the decision boundary.
+        plot_method: The plotting method for the decision boundary.
+        title: The title of the plot.
+        alpha: The transparency level for the decision boundary.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
 
     WHY: A decision boundary makes the classifier's learned separation of
     feature space visible.
@@ -107,6 +127,17 @@ def show_confusion_matrix(
 ) -> Axes:
     """Show a confusion matrix from completed classification predictions.
 
+    Args:
+        y_true: The true labels.
+        y_pred: The predicted labels.
+        labels: Optional sequence of labels to include in the matrix.
+        normalize: Normalization method for the confusion matrix.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        title: The title of the plot.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
+
     WHY: Overall accuracy can hide which classes are being confused.
 
     This function delegates the matrix visualization to scikit-learn and
@@ -134,6 +165,16 @@ def show_prediction_errors(
     title: str = "Classification Prediction Errors",
 ) -> Axes:
     """Show correct and incorrect classifications in two-feature space.
+
+    Args:
+        X: A DataFrame containing exactly two numeric features.
+        y_true: The true labels.
+        y_pred: The predicted labels.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        title: The title of the plot.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
 
     WHY: Looking directly at mistakes can reveal overlap, unusual observations,
     and regions where a classifier struggles.
@@ -184,6 +225,15 @@ def show_class_distribution(
     x_label: str = "Class",
 ) -> Axes:
     """Show the number of observations in each target class.
+
+    Args:
+        y: The target labels.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        title: The title of the plot.
+        x_label: The label for the x-axis.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
 
     WHY: Class imbalance can affect training, evaluation, and interpretation.
     """

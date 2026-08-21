@@ -12,7 +12,17 @@ from ml_vizkit.splits import show_train_test_split
 
 @dataclass(frozen=True, slots=True)
 class SplitView:
-    """Data needed to visualize one already-created train/test split."""
+    """Data needed to visualize one already-created train/test split.
+
+    Args:
+        label: A descriptive label for the split.
+        X_train: The training feature set.
+        X_test: The testing feature set.
+        score: Optional evaluation score for the split.
+
+    Returns:
+        An instance of SplitView containing the data for the split.
+    """
 
     label: str
     X_train: pd.DataFrame
@@ -24,6 +34,12 @@ def compare_splits(
     splits: Sequence[SplitView],
 ) -> tuple[Axes, ...]:
     """Create one train/test visualization per completed split.
+
+    Args:
+        splits: A sequence of SplitView instances representing the completed splits.
+
+    Returns:
+        A tuple of Matplotlib Axes, each containing the visualization for one split.
 
     WHY: Comparing several partitions makes sampling variability visible.
 
@@ -58,6 +74,15 @@ def compare_models(
     title: str = "Model Comparison",
 ) -> Axes:
     """Compare evaluation scores from already-completed model experiments.
+
+    Args:
+        scores: A mapping from model names to their evaluation scores.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        metric_name: The name of the evaluation metric.
+        title: The title of the plot.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
 
     WHY: A consistent visual basis helps analysts compare models evaluated with
     the same metric and experimental conditions.

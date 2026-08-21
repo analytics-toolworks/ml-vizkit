@@ -4,7 +4,6 @@
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://analytics-toolworks.github.io/ml-vizkit/)
 [![Python](https://img.shields.io/python/required-version-toml?tomlFilePath=https://raw.githubusercontent.com/analytics-toolworks/ml-vizkit/main/pyproject.toml&logo=python)](https://github.com/analytics-toolworks/ml-vizkit/blob/main/pyproject.toml)
 ![uv](https://img.shields.io/badge/uv-managed-DE5FE9)
-[![CI Status](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 [![CI](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/analytics-toolworks/ml-vizkit/actions/workflows/ci-python-zensical.yml)
@@ -85,6 +84,67 @@ Experiment inspection:
 - `show_train_test_split()`
 - `compare_splits()`
 - `compare_models()`
+
+Output:
+
+- `save_chart()`
+
+## Example: Classification
+
+```python
+from ml_vizkit import show_confusion_matrix
+
+ax = show_confusion_matrix(
+    y_test,
+    y_pred,
+)
+```
+
+## Example: Regression
+
+```python
+from ml_vizkit import show_actual_vs_predicted
+
+ax = show_actual_vs_predicted(
+    y_test,
+    y_pred,
+)
+```
+
+## Example: Model Inspection
+
+```python
+from ml_vizkit import show_feature_importance
+
+ax = show_feature_importance(
+    model,
+    feature_names,
+)
+```
+
+## Example: Save Chart
+
+```python
+from ml_vizkit import save_chart, show_confusion_matrix
+
+ax = show_confusion_matrix(
+    y_test,
+    y_pred,
+)
+
+save_chart(
+    ax,
+    "docs/images/confusion-matrix.png",
+)
+```
+
+## Example: Show Chart
+
+```python
+import matplotlib.pyplot as plt
+
+plt.show()
+```
 
 ## Developer Command Reference
 

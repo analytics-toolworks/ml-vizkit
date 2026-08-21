@@ -14,6 +14,15 @@ def show_train_test_split(
 ) -> Axes:
     """Show which observations were assigned to training and testing.
 
+    Args:
+        X_train: The training feature DataFrame containing exactly two numeric features.
+        X_test: The testing feature DataFrame containing exactly two numeric features.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        title: The title of the plot.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
+
     WHY: Seeing the actual partition makes random splitting concrete instead
     of treating the random seed as unexplained boilerplate.
 

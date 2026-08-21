@@ -12,7 +12,14 @@ type Numeric1D = Sequence[float] | np.ndarray | pd.Series
 
 
 def _new_axes(ax: Axes | None) -> Axes:
-    """Return caller-provided axes or create new axes without rendering."""
+    """Return caller-provided axes or create new axes without rendering.
+
+    Args:
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+
+    Returns:
+        The Matplotlib Axes to use for plotting.
+    """
     if ax is not None:
         return ax
     _, new_ax = plt.subplots()

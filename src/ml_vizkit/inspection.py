@@ -17,6 +17,15 @@ def show_feature_importance(
 ) -> Axes:
     """Show model-provided feature importance values.
 
+    Args:
+        model: The already-trained model exposing ``feature_importances_``.
+        feature_names: The names of the features corresponding to the importance values.
+        ax: The Matplotlib Axes to plot on. If None, a new Axes is created.
+        title: The title of the plot.
+
+    Returns:
+        The Matplotlib Axes containing the plot.
+
     WHY: Importance values can help analysts investigate which features most
     influenced a fitted model.
 

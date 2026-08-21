@@ -38,6 +38,7 @@ spend more time interpreting models and experimental results.
 - do not train models or choose models, features, metrics, or experimental settings
 - use established Python visualization and machine-learning libraries underneath
 - return Matplotlib `Axes` objects rather than rendering automatically
+- provide `save_chart()` for convenient chart export
 - keep visualizations inspectable, adaptable, and easy to replace
 - automate plotting mechanics without reducing analytical agency
 
@@ -47,7 +48,9 @@ interactive use.
 ## Example
 
 ```python
-from ml_vizkit import show_decision_boundary
+import matplotlib.pyplot as plt
+
+from ml_vizkit import save_chart, show_decision_boundary
 
 ax = show_decision_boundary(
     model,
@@ -56,6 +59,13 @@ ax = show_decision_boundary(
 )
 
 ax.set_title("Penguin Species Decision Boundary")
+
+save_chart(
+    ax,
+    "docs/images/decision-boundary.png",
+)
+
+plt.show()
 ```
 
 ## See Also
